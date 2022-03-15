@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+#app {
+    text-align: center;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 100px;
+}
+
+#gallows-line-1 {
+    height: 2px;
+    width: 400px;
+    background-color: black;
+    margin: auto;
+}
+
+#gallows-line-2 {
+    height: 40px;
+    width: 2px;
+    background-color: black;
+    margin: auto;
+}
+
+#man {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+#word {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#word li {
+    /* flex-grow: 1; */
+    margin: 0 15px 0 15px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#alphabet {
+    list-style-type: none;
+    padding: 0;
+    max-width: 228px;
+    margin: auto;
+    margin-top: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* KEEP THIS AS A REFERENCE:
+
+parent/container/row {
+    display: flex;    mandatory 
+    flex-direction: ;    row (default) | row-reverse | column | column-reverse 
+    justify-content: ;    flex-start (default) | flex-end | center | space-between | space-around | space-evenly 
+    align-items: ;    flex-start | flex-end | center | (baseline) | stretch (default) 
+    flex-wrap: ;    nowrap (default) | wrap | wrap-reverse 
+    align-content: ;    flex-start | flex-end | center | space-between | space-around | stretch (default)
+
+    note on 'align-content' (paraphrased from flexboxfroggy.com): 'align-content' determines the spacing between lines, while 'align-items' determines how the items as a whole are aligned within the container; when there is only one line, 'align-content' has no effect
+
+    flex-flow: ;    this is shorthand for 'flex-direction: ;' and 'flex-wrap: ;' (e.g., 'flex-flow: column wrap;')
+}
+
+child/item/cell {
+    align-self: ;    flex-start | flex-end | center | (baseline) | stretch (default)
+    flex-grow: ;    0 is default (Jen Kramer: This is very hard to understand)
+    flex-shrink: ;    1 is default (Jen Kramer: This is very hard to understand)
+    flex-basis: ;    auto is default (Jen Kramer: This is basically the 'width' property--never use with Flexbox--but with some flexibility you can't control)
+    order: ;    0 is default
+
+    flex: [flex-grow number, flex-shrink number, flex-basis number];    this is a way (instead of using % outside of Flexbox) to set relative sizes of elements. (This is how I THOUGHT 'flex-grow' worked.) An example is 'flex: 1 1 0;' (the shorthand for which is the oft-used 'flex: 1;').
+    
+    margin-top: auto;    this puts the element at the bottom.
+}
+
+*/

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+        <link rel="stylesheet" href="./assets/css/style.css"> <!--always put this line after fonts because of how things load-->
+        
+        <title>Hangman with Vue</title>
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>Hangman with Vue</h1>
+            </header>
+            <main>
+                <section>
+                    <p id="gallows-line-1"></p>
+                    <p id="gallows-line-2"></p>
+                </section>
+                <ul id="man">
+                    <li>?????</li>
+                </ul>
+                <ul id="word">
+                    <li>?????</li>
+                </ul>
+                <ul id="alphabet">
+                    <li>
+                        <button>?????</button>
+                    </li>
+                </ul>
+            </main>
+        </div>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
