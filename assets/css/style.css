@@ -46,18 +46,19 @@ h1 {
 }
 
 #word li {
-    /* flex-grow: 1; */
     margin: 0 15px 0 15px;
     font-size: 30px;
     text-transform: uppercase;
 }
 
 #alphabet {
-    list-style-type: none;
-    padding: 0;
     max-width: 228px;
     margin: auto;
     margin-top: 90px;
+}
+
+#alphabet button {
+    cursor: pointer;
 }
 
 

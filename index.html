@@ -20,16 +20,14 @@
                     <p id="gallows-line-2"></p>
                 </section>
                 <ul id="man">
-                    <li>?????</li>
+                    <li v-for="bodyPartShown in bodyPartsShown" :key="bodyPartShown">{{ bodyPartShown }}</li> 
                 </ul>
                 <ul id="word">
-                    <li>?????</li>
+                    <li v-for="letterOfWIP in wordInProg">{{ letterOfWIP }}</li> <!-- Note that I had to remove ':key="letterOfWIP"', along with the one referenced below, to allow the project to work properly. -->
                 </ul>
-                <ul id="alphabet">
-                    <li>
-                        <button>?????</button>
-                    </li>
-                </ul>
+                <section id="alphabet">
+                    <button :disabled="lettersGuessed.includes(alphaLett)" v-for="alphaLett in alphabet" @click="processSelection(alphaLett)">{{ alphaLett }}</button> <!-- Note that I had to remove ':key="alphaLett"', along with the one referenced above, to allow the project to work properly. -->
+                </section>
             </main>
         </div>
         <script src="https://unpkg.com/vue@next"></script>
