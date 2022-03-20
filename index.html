@@ -10,7 +10,7 @@
         <title>Hangman with Vue</title>
     </head>
     <body>
-        <div id="app">
+        <div id="app" v-cloak> <!-- 'v-cloak' prevents the user from being able to see Vue rendering in the UI. I.e., thanks to 'v-cloak', the mustache syntax etc. is no longer visible for that split second. Note there is styling for 'v-cloak' in the CSS. -->
             <header>
                 <h1>Hangman with Vue</h1>
             </header>
