@@ -23,10 +23,10 @@
                     <li v-for="bodyPartShown in bodyPartsShown" :key="bodyPartShown">{{ bodyPartShown }}</li> 
                 </ul>
                 <ul id="word">
-                    <li v-for="letterOfWIP in wordInProg">{{ letterOfWIP }}</li> <!-- Note that I had to remove ':key="letterOfWIP"', along with the one referenced below, to allow the project to work properly. -->
+                    <li v-for="(letterOfWIP, index) in wordInProg" :key="index">{{ letterOfWIP }}</li> <!-- Note that I had to use ':key="index"' instead of ':key="letterOfWIP"' for the project to work properly...because of the 'You lose' statement (that has two 'o's) and any of the 'words' array words with a letter occurring more than once (e.g., 'hunting' and 'drumming'). Because of course what ':key' is set to has to be a unique value. -->
                 </ul>
                 <section id="alphabet">
-                    <button :disabled="lettersGuessed.includes(alphaLett)" v-for="alphaLett in alphabet" @click="processSelection(alphaLett)">{{ alphaLett }}</button> <!-- Note that I had to remove ':key="alphaLett"', along with the one referenced above, to allow the project to work properly. -->
+                    <button :disabled="lettersGuessed.includes(alphaLett)" v-for="(alphaLett, index) in alphabet" :key="index" @click="processSelection(alphaLett)">{{ alphaLett }}</button> <!-- Note that I had to use ':key="index"' instead of ':key="alphaLett"' for the project to work properly...because of the 'You lose' statement (that has two 'o's) and any of the 'words' array words with a letter occurring more than once (e.g., 'hunting' and 'drumming'). Because of course what ':key' is set to has to be a unique value. -->
                 </section>
             </main>
         </div>

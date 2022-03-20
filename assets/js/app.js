@@ -71,7 +71,7 @@ const App = {
         }
     },
     mounted() {
-        console.log(this.wordLettersArr)
+        console.log(this.wordLettersArr) // just helpful, not necessary
         this.wordInProg = this.wordLettersArr.map(letter => '_')
     }
 }
